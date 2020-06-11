@@ -1,2 +1,3 @@
 *.~m
 libphidget.dylib
+.DS_Store
