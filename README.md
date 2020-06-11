@@ -16,3 +16,6 @@ ln -s /Library/Frameworks/Phidget22.framework phidget.dylib
 ```
 
 If anyone is able to test and get this working on Windows, please let me know and I will update the documentation.
+
+
+![Screenshot of MATLAB PhidgetBridge](https://raw.githubusercontent.com/haynieresearch/matlab-phidgetbridge-mex/master/img/matlab_screenshot.png)
