@@ -1,6 +1,13 @@
 #include "mex.h"
-#include <phidget22.h>
+
 #include <stdio.h>
+
+#ifdef WIN32
+#include <windows.h>
+#include "C:\Program Files\Phidgets\Phidget22\phidget22.h"
+#else
+#include <phidget22.h>
+#endif
 
 double output;
 
@@ -8,7 +15,7 @@ void onVoltageRatioChange(PhidgetVoltageRatioInputHandle ch, void * ctx, double 
 	output = voltageRatio;
 }
 
-void phidgetBridge() {
+int phidgetBridge() {
   PhidgetVoltageRatioInputHandle voltageRatioInput0;
 	PhidgetVoltageRatioInput_create(&voltageRatioInput0);
 	PhidgetVoltageRatioInput_setOnVoltageRatioChangeHandler(voltageRatioInput0, onVoltageRatioChange, NULL);
